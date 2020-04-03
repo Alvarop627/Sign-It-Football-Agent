@@ -9,9 +9,9 @@
 
     <Button
         android:id="@+id/button"
-        android:layout_width="288dp"
-        android:layout_height="48dp"
-        android:layout_marginBottom="30dp"
+        android:layout_width="250dp"
+        android:layout_height="55dp"
+        android:layout_marginBottom="10dp"
         android:background="@drawable/nueva_partida"
         app:layout_constraintBottom_toTopOf="@+id/button2"
         app:layout_constraintEnd_toEndOf="parent"
@@ -19,13 +19,13 @@
 
     <Button
         android:id="@+id/button2"
-        android:layout_width="288dp"
-        android:layout_height="48dp"
+        android:layout_width="250dp"
+        android:layout_height="55dp"
         android:layout_marginBottom="100dp"
         android:background="@drawable/cargar_partida"
-        android:onClick="goToMainMenu"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
@@ -40,10 +40,34 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="0dp"
-        android:layout_height="293dp"
+        android:layout_width="178dp"
+        android:layout_height="148dp"
+        android:layout_marginTop="50dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/logo_sign_it" />
+        app:srcCompat="@drawable/logo_blue" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="384dp"
+        android:layout_height="47dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.488"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:srcCompat="@drawable/title" />
+
+    <Button
+        android:id="@+id/btnContinue"
+        android:layout_width="250dp"
+        android:layout_height="55dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/continuar_partida"
+        android:onClick="goToMainMenu"
+        app:layout_constraintBottom_toTopOf="@+id/button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

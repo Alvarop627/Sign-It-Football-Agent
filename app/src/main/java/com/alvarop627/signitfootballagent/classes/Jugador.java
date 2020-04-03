@@ -66,7 +66,7 @@ public class Jugador {
 
     /**
      * @param nombre
-     *            modifica el nombre
+     * modifica el nombre
      */
     public void setNombre(String nombre) {
         this.nombre = nombre;
