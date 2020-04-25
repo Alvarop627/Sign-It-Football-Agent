@@ -8,17 +8,18 @@
     tools:context=".activities.MainActivity">
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/btnNewGame"
         android:layout_width="250dp"
         android:layout_height="55dp"
         android:layout_marginBottom="10dp"
         android:background="@drawable/nueva_partida"
-        app:layout_constraintBottom_toTopOf="@+id/button2"
+        android:onClick="goToLogin"
+        app:layout_constraintBottom_toTopOf="@+id/btnLoad"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/btnLoad"
         android:layout_width="250dp"
         android:layout_height="55dp"
         android:layout_marginBottom="100dp"
@@ -66,7 +67,7 @@
         android:layout_marginBottom="10dp"
         android:background="@drawable/continuar_partida"
         android:onClick="goToMainMenu"
-        app:layout_constraintBottom_toTopOf="@+id/button"
+        app:layout_constraintBottom_toTopOf="@+id/btnNewGame"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 

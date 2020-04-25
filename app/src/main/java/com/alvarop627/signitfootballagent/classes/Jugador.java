@@ -4,6 +4,8 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 import java.util.Random;
+//NOTA: ESTA CLASE TODAVÍA VA A SER MODIFICADA VARIAS VECES. PRETENDO AÑADIR MÁS ATRIBUTOS A LA CLASE Y ADEMÁS QUIERO CAMBIAR EL CÓDIGO Y PONERLO EN INGLÉS
+//ACTUALMENTE NO ME DETECTA BIEN EL ENUMERADO Y ME TENGO QUE INFORMAR DE COMO ARREGLARLO.
 
 public class Jugador {
     private String nombre, apellidos;
@@ -43,7 +45,7 @@ public class Jugador {
         this.setResistencia(r.nextInt(100));
         this.setTecnica(r.nextInt(100));
         this.setTitular(titular);
-        this.posicion = pos;
+        //this.posicion = pos;
     }
 
     public Jugador() {
@@ -54,7 +56,7 @@ public class Jugador {
         this.setVelocidad(r.nextInt(100));
         this.setResistencia(r.nextInt(100));
         this.setTecnica(r.nextInt(100));
-        this.setPosicionJugadorAleatoriamente();
+        //this.setPosicionJugadorAleatoriamente();
     }
 
     /**
@@ -188,6 +190,7 @@ public class Jugador {
         return posicion;
     }
 
+    /*
     public void setPosicionJugadorAleatoriamente() {
         final List<PosicionJugador> posiciones = Collections.unmodifiableList(Arrays.asList(PosicionJugador.values()));
         final int tamanyo = posiciones.size();
@@ -195,7 +198,7 @@ public class Jugador {
 
         this.posicion = posiciones.get(r.nextInt(tamanyo));
 
-    }
+    }*/
 
     @Override
     public String toString() {
