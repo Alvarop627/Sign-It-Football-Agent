@@ -1,3 +1,7 @@
 <resources>
-    <string name="app_name">SignItFootballAgent</string>
+<string name="app_name">SignItFootballAgent</string>
+<string name="facebook_application_id" translatable="false">575126176515745</string>
+<string name="facebook_login_protocol_schema" translatable="false">fb575126176515745</string>
+
+
 </resources>

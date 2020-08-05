@@ -6,11 +6,12 @@ import android.os.Bundle;
 
 import com.alvarop627.signitfootballagent.R;
 
-public class MainMenu extends AppCompatActivity {
+public class Clientes extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main_menu);
+        setContentView(R.layout.activity_clientes);
+
     }
 }

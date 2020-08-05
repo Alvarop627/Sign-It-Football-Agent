@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "407713751042",
+    "firebase_url": "https://sign-it-football-agent.firebaseio.com",
+    "project_id": "sign-it-football-agent",
+    "storage_bucket": "sign-it-football-agent.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:407713751042:android:fb213a6e2834baf8d6071b",
+        "android_client_info": {
+          "package_name": "com.alvarop627.signitfootballagent"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "407713751042-4uh0ct1l8kpnsk797r772vrhsubcul2i.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAK1e4KK-Bd0g7hIBnCYG5spfPNj7Cg1T0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "407713751042-4uh0ct1l8kpnsk797r772vrhsubcul2i.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

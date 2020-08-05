@@ -9,8 +9,8 @@ import java.util.Random;
 
 public class Jugador {
     private String nombre, apellidos;
-    private int fuerza, velocidad, resistencia, tecnica;
-    private boolean titular;
+    private int fuerza, velocidad, resistencia, tecnica, potencial, sueldoRec, edad;
+    private boolean titular, esCliente;
     private PosicionJugador posicion;
 
     private static final String[] grupoNom = { "Juan", "Paco", "Pepe", "Mateo", "Miguel", "Fabian", "Antonio", "Lolo",
@@ -27,13 +27,14 @@ public class Jugador {
             "Casillas", "Reina", "Puskas" };
 
     public Jugador(String nombre, String apellidos, int precio, int sueldo, int fuerza, int velocidad, int resistencia,
-                   int tecnica) {
+                   int tecnica, int potencial) {
         this.nombre = nombre;
         this.apellidos = apellidos;
         this.fuerza = fuerza;
         this.velocidad = velocidad;
         this.resistencia = resistencia;
         this.tecnica = tecnica;
+        this.potencial = potencial;
     }
 
     public Jugador(PosicionJugador pos, boolean titular) {
@@ -44,8 +45,9 @@ public class Jugador {
         this.setVelocidad(r.nextInt(100));
         this.setResistencia(r.nextInt(100));
         this.setTecnica(r.nextInt(100));
+        this.setPotencial(this.getCalidad());
         this.setTitular(titular);
-        //this.posicion = pos;
+        this.posicion = pos;
     }
 
     public Jugador() {
@@ -56,7 +58,8 @@ public class Jugador {
         this.setVelocidad(r.nextInt(100));
         this.setResistencia(r.nextInt(100));
         this.setTecnica(r.nextInt(100));
-        //this.setPosicionJugadorAleatoriamente();
+        this.setPotencial(this.getCalidad());
+        this.setPosicionJugadorAleatoriamente();
     }
 
     /**
@@ -90,29 +93,52 @@ public class Jugador {
     }
 
     /**
-     * @return el precio
+     * @return el valor del jugador
      */
-    public int getPrecio() {
+    public int getValor() {
         int sumCar = this.getFuerza() + this.getVelocidad() + this.getResistencia() + this.getTecnica();
-        int precio;
+        int valor;
         if (sumCar < 50) {
-            precio = sumCar * 2500;
+            valor = sumCar * 2500;
         } else if (50 <= sumCar && sumCar < 200) {
-            precio = sumCar * 10000;
+            valor = sumCar * 10000;
         } else if (200 <= sumCar && sumCar < 300) {
-            precio = sumCar * 33333;
+            valor = sumCar * 33333;
         } else {
-            precio = sumCar * 250000;
+            valor = sumCar * 250000;
 
         }
-        return precio;
+        return valor;
     }
 
     /**
-     * @return el sueldo
+     * @return la calidad del jugador
      */
-    public int getSueldo() {
-        return this.getPrecio() / 100;
+    public int getCalidad(){
+        return (this.getFuerza() + this.getVelocidad() + this.getResistencia() + this.getTecnica())/4;
+    }
+    /**
+     * @return el potencial del jugador
+     */
+    public int getPotencial(){
+        return potencial;
+    }
+
+    /**
+     * @param calidad
+     *            establece el potencial del jugador
+     */
+    public void setPotencial(int calidad) {
+        Random r = new Random();
+        this.potencial= calidad + r.nextInt(100-calidad);
+    }
+
+    /**
+     * @return el sueldo recomendado
+     */
+    public int getSueldoRec() {
+        sueldoRec = this.getValor() / 100;
+        return sueldoRec;
     }
 
     /**
@@ -190,7 +216,22 @@ public class Jugador {
         return posicion;
     }
 
-    /*
+    /**
+     *
+     * @return si es cliente o no
+     */
+    public boolean esCliente() {
+        return esCliente;
+    }
+
+    /**
+     * @param esCliente
+     *            modifica si es cliente o no
+     */
+    public void setEsCliente(boolean esCliente) {
+        this.esCliente = esCliente;
+    }
+
     public void setPosicionJugadorAleatoriamente() {
         final List<PosicionJugador> posiciones = Collections.unmodifiableList(Arrays.asList(PosicionJugador.values()));
         final int tamanyo = posiciones.size();
@@ -198,7 +239,7 @@ public class Jugador {
 
         this.posicion = posiciones.get(r.nextInt(tamanyo));
 
-    }*/
+    }
 
     @Override
     public String toString() {
