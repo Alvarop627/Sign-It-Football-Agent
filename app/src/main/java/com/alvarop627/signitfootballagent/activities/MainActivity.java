@@ -83,12 +83,13 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    private void goToMainMenu() {
+    public void goToMainMenu(View view) {
         Intent intent = new Intent(this, MenuActivity.class);
         startActivity(intent);
     }
-    /*public void goToNewGame(View view){
-        Intent intent = new Intent(this, Login.class);
+
+    public void goToNewGame(View view) {
+        Intent intent = new Intent(this, NewGameActivity.class);
         startActivity(intent);
-    }*/
+    }
 }

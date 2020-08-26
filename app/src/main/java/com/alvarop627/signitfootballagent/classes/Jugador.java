@@ -26,7 +26,7 @@ public class Jugador {
             "Bravo", "Vargas", "Stegen", "Jimenez", "Valderrama", "Lozano", "Martinez", "Rabiot", "Lopez", "Verrati",
             "Casillas", "Reina", "Puskas" };
 
-    public Jugador(String nombre, String apellidos, int precio, int sueldo, int fuerza, int velocidad, int resistencia,
+    public Jugador(String nombre, String apellidos, int fuerza, int velocidad, int resistencia,
                    int tecnica, int potencial) {
         this.nombre = nombre;
         this.apellidos = apellidos;

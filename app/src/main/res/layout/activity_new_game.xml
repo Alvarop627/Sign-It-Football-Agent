@@ -5,14 +5,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/fondo_login"
-    tools:context=".activities.LoginActivity">
+    tools:context=".activities.NewGameActivity">
 
     <TextView
         android:id="@+id/txtNombre"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="276dp"
+        android:layout_marginTop="300dp"
         android:text="Introduce tu nombre: "
         android:textColor="@android:color/background_light"
         android:textSize="24sp"
@@ -20,11 +20,11 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/editText"
+        android:id="@+id/txtNewUser"
         android:layout_width="144dp"
         android:layout_height="50dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="270dp"
+        android:layout_marginTop="300dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:textSize="24sp"
@@ -34,7 +34,8 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/btnPlayNewGame"
+        android:onClick="playNewGame"
         android:layout_width="129dp"
         android:layout_height="104dp"
         android:layout_marginBottom="25dp"
